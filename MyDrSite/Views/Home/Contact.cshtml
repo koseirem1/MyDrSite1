@@ -1,0 +1,99 @@
+﻿@model MyDrSite.Models.ContactViewModel
+<h2 style="text-align:center">İletişim</h2>
+<hr>
+<h3 style="text-align:center">Bize Yazın</h3>
+
+<div class="container">
+
+    <div class="row my-2">
+        <div class="col-md-6">
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(false)
+            <div class=" form-group row">
+                @Html.LabelFor(model => model.Email)
+                
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+            </div>
+
+                <div class=" form-group row">
+                    <label for="exampleInputEmail1">Ad</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+
+                </div>
+
+                <div class=" form-group row">
+
+
+                    <label for="exampleInputEmail1">Soyad</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+
+
+
+
+                <div class=" form-group row">
+
+
+
+                </div>
+
+            }
+        </div>
+
+        <div class="col-md-6">
+            
+                <label for="message" class=" col-form-label">Konu Başlığı</label>
+                <select class="form-control ">
+                    <label for="exampleInputPassword1">Konu Başlığı</label>
+                    <option>SEÇİNİZ</option>
+                    <option>SİPARİŞİNİZ İLE İLGİLİ SORULARINIZ</option>
+                    <option>SİPARİŞ İPTAL</option>
+                    <option>MAĞAZALARIMIZ İLE İLGİLİ SORULARINIZ</option>
+                </select>
+
+                <div class=" form-group row">
+
+
+                    <label for="message" class="col-md-2 col-form-label">Yorum</label>
+                    <div class="col-md-10 my-2 m-2">
+                        <textarea type="message" class="form-control" id="email" placeholder="Mesaj" rows="6">
+                                                            </textarea>
+
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <div class="col-md-10 offset-md-5">
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </div>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="row col-4 ml-4 m-10 ">
+            <div class="card border-secondary mb-5 " style="max-width: 18rem;height: 200px">
+                <div class="card-header">D&R Müşteri Hizmetleri</div>
+                <div class="card-body text-secondary">
+
+                    <p class="card-text">
+                        T: +90 (850) 266 3737
+                        M: bilgi@dr.com.tr
+
+                        Çağrı Merkezi Çalışma Saatlerimiz: 09:00 – 21:00
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row col-8">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6015.981668328638!2d28.99243!3d41.069193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b53a5d7dc4736cc!2zRCZS!5e0!3m2!1str!2str!4v1564312637976!5m2!1str!2str" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<br>
+<br>
