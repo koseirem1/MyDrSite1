@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MyDrSite.Models.Book>
+@{
+    ViewBag.Title = "Kitap";
+
+}
+<h2>Kitaplar</h2>
+<a href="@Url.Action("Create")" class="btn btn-primary"> Yeni Kitap </a>
+<table class="table table-striped table-hover  table-condensed">
+    <!--table-bordered da yazılabilir.-->
+    <thead>
+        <tr>
+            
+            
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th> @Html.DisplayNameFor(model => model.AuthorId)</th>
+            <th> @Html.DisplayNameFor(model => model.Publisher)</th>
+            <th>Eylemler</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+               
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Author.FullName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Publisher)</td>
+                <td>
+                    <a href="@Url.Action("Edit" ,new {id=item.Id}) " class="btn btn-success btn-sm">Düzenle</a>
+                    <a href="@Url.Action("Delete",new { id= item.Id})" class="btn btn-danger btn-sm" onclick="return confirm('Bu kaydı silmek istediğinizden emin misiniz?');">Sil</a>
+                </td>
+
+
+
+                
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
