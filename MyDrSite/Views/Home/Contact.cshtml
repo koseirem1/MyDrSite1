@@ -17,7 +17,7 @@
         @Html.ValidationSummary(false)
         <div class="row my-2">
 
-            <div class="col-md-6">
+            <div class="col-md-6 p-4">
 
 
                 <div class=" form-group row">
@@ -47,32 +47,33 @@
 
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 my-5 ">
 
-                @Html.EnumDropDownListFor(model => model.Gunlere, "Seçiniz")
-                @Html.ValidationMessageFor(model => model.Gunlere, "", htmlAttributes: new { @class = "text-danger" })
+                <div class=" form-group row my-2">
+                    @Html.EnumDropDownListFor(model => model.Gunlere, "Seçiniz")
+                    @Html.ValidationMessageFor(model => model.Gunlere, "", htmlAttributes: new { @class = "text-danger" })
+                </div>
+                    <!--Html.DropDownList("Drop", "SEÇİNİZ")
+             Html.DropDownListFor(model => model.Drop, (SelectList)ViewBag.Drop, new { class = "DropDownList-control" })
 
-                <!--Html.DropDownList("Drop", "SEÇİNİZ")
-         Html.DropDownListFor(model => model.Drop, (SelectList)ViewBag.Drop, new { class = "DropDownList-control" })
-
-                Html.LabelFor(model => model.Drop)
-    Html.ValidationMessageFor(model => model.Drop, "SEÇİNİZ", new { class = "text-danger" })-->
-
-
-
+                    Html.LabelFor(model => model.Drop)
+        Html.ValidationMessageFor(model => model.Drop, "SEÇİNİZ", new { class = "text-danger" })-->
 
 
 
-                <div class=" form-group row">
 
-                    @Html.LabelFor(model => model.Message)
-                    @Html.TextAreaFor(model => model.Message, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+
+
+                    <div class=" form-group row">
+
+                        @Html.LabelFor(model => model.Message)
+                        @Html.TextAreaFor(model => model.Message, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
 
         <div class="row">
             <div class="col-md-6 offset-md-5">

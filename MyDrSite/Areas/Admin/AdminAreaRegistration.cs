@@ -15,10 +15,11 @@ namespace MyDrSite.Areas.Admin
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Admin_default",
-                "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
-            );
+                 "Admin_default",
+                 "Admin/{controller}/{action}/{id}",
+                 new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                 namespaces: new string[] { "MyDrSite.Areas.Admin.Controllers" }
+             );
         }
     }
 }

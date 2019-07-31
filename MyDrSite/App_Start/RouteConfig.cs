@@ -16,11 +16,11 @@ namespace MyDrSite
            
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("hakkimdaRoute", "hakkimizda", new { controller = "Home", action = "About" });
-            routes.MapRoute("kitaplarRoute", "Kitap", new { controller = "Home", action = "Books" });
-            routes.MapRoute("filmlerRoute", "Film", new { controller = "Home", action = "Films" });
-            routes.MapRoute("iletisimRoute", "iletisim", new { controller = "Home", action = "Contact" });
-            routes.MapRoute("kvkkRoute", "kisisel-verilere-iliskin-aydinlatma-metni", new { controller = "Home", action = "Kvkk" });
+            routes.MapRoute("hakkimdaRoute", "hakkimizda", new { controller = "Home", action = "About" }, namespaces: new string[] { "MyDrSite.Controllers" });
+            routes.MapRoute("kitaplarRoute", "Kitap", new { controller = "Home", action = "Books" }, namespaces: new string[] { "MyDrSite.Controllers" });
+            routes.MapRoute("filmlerRoute", "Film", new { controller = "Home", action = "Films" }, namespaces: new string[] { "MyDrSite.Controllers" });
+            routes.MapRoute("iletisimRoute", "iletisim", new { controller = "Home", action = "Contact" }, namespaces: new string[] { "MyDrSite.Controllers" });
+            routes.MapRoute("kvkkRoute", "kisisel-verilere-iliskin-aydinlatma-metni", new { controller = "Home", action = "Kvkk" }, namespaces: new string[] { "MyDrSite.Controllers" });
             
 
             routes.MapRoute(
